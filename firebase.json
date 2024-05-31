@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "site": "lindowtest",
+    "public": "out",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "nextjs"
+      }
+    ]
+  }
+}
