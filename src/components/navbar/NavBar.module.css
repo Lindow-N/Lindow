@@ -1,0 +1,79 @@
+/* src/components/NavBar/NavBar.module.css */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: var(--dark-gray);
+  border-radius: 50px;
+  position: fixed;
+  width: 90%;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navList {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navItem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  height: 85px;
+}
+
+.navLink {
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bolder;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  /* Supprimer l'effet hover par défaut */
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoImage {
+  height: 85px;
+  width: auto;
+}
+
+.navItemActive {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  height: 85px;
+  background-color: var(--white);
+}
+.navLinkActive {
+  color: var(--dark-gray);
+  padding: 10px;
+  cursor: pointer;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bolder;
+  font-size: 20px;
+  text-decoration: none;
+}
