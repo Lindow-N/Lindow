@@ -12,6 +12,13 @@ export default function Index() {
   const [activeSection, setActiveSection] = useState("");
   console.log(activeSection);
 
+  const handleClick = () => {
+    const sectionElement = document.getElementById("contact");
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   useEffect(() => {
     const sections = document.querySelectorAll("section");
     const options = {
@@ -42,7 +49,7 @@ export default function Index() {
     <div className={styles.MainContainer}>
       <NavBar activeSection={activeSection} />
       <section id="accueil">
-        <Home />
+        <Home handleClick={handleClick} />
       </section>
       <section id="services">
         <Services />

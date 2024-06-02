@@ -1,4 +1,89 @@
 .MainContainer {
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   background-color: var(--slate-gray);
+  padding-top: 6%;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  color: var(--white);
+  text-align: center;
+  letter-spacing: 0.06em;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--white);
+  font-size: 48px;
+  line-height: 1.25;
+  letter-spacing: 0.1em; /* Espace entre les lettres */
+  word-spacing: 0.13em; /* Espace entre les mots */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: "Noto Sans JP", sans-serif;
+  color: var(--white);
+  text-align: center;
+  letter-spacing: 0.06em;
+  margin-bottom: 20px;
+  padding: 0 30%;
+}
+
+.servicesContainer {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 10%;
+  margin-top: 50px;
+}
+
+.servicesImage {
+  width: 30%;
+  height: auto;
+}
+
+/* Styles pour les appareils mobiles */
+@media (max-width: 768px) {
+  .MainContainer {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .title {
+    font-size: 32px;
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+    margin-bottom: 15px;
+    padding: 0 10%;
+  }
+
+  .description {
+    font-size: 14px;
+    padding: 0 10%;
+  }
+
+  .servicesContainer {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .servicesImage {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }

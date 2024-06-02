@@ -1,0 +1,22 @@
+[debug] [2024-06-02T13:49:03.090Z] ----------------------------------------------------------------------
+[debug] [2024-06-02T13:49:03.092Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\lindo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-06-02T13:49:03.092Z] CLI Version:   13.10.2
+[debug] [2024-06-02T13:49:03.092Z] Platform:      win32
+[debug] [2024-06-02T13:49:03.093Z] Node Version:  v18.17.0
+[debug] [2024-06-02T13:49:03.094Z] Time:          Sun Jun 02 2024 15:49:03 GMT+0200 (heure d’été d’Europe centrale)
+[debug] [2024-06-02T13:49:03.094Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-02T13:49:03.162Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-02T13:49:03.163Z] > authorizing via signed-in user (anthony.casares@lindow.fr)
+[debug] [2024-06-02T13:49:03.163Z] [iam] checking project lindow-9805a for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-06-02T13:49:03.165Z] > refreshing access token with scopes: []
+[debug] [2024-06-02T13:49:03.166Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-06-02T13:49:03.167Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-06-02T13:49:03.460Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-06-02T13:49:03.460Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-06-02T13:49:03.460Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2024-06-02T13:49:03.461Z] > refreshing access token with scopes: []
+[debug] [2024-06-02T13:49:03.461Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-06-02T13:49:03.461Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]

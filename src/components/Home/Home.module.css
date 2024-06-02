@@ -1,5 +1,94 @@
 .MainContainer {
   height: 100vh;
   background-color: var(--white);
-  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Correction de justify-items en justify-content */
+}
+
+.HomeContainer {
+  width: 90%;
+  height: 65%;
+  margin: 0 auto;
+  margin-top: 145px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0% 8%;
+}
+
+.HomeContainerLeft {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 8% 0;
+}
+
+.Title {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+  font-size: 55px;
+  line-height: 125%;
+  letter-spacing: 6%; /* Espace entre les lettres */
+  word-spacing: 130%; /* Espace entre les mots */
+  text-align: center;
+}
+
+.Name {
+  color: var(--slate-gray);
+}
+
+.ProfilImage {
+  height: 100%;
+  width: auto;
+}
+
+.Description {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Styles pour les appareils mobiles */
+@media (max-width: 768px) {
+  .MainContainer {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .HomeContainer {
+    flex-direction: column;
+    height: auto;
+    margin-top: 20px;
+    padding: 0% 4%;
+  }
+
+  .HomeContainerLeft {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .Title {
+    font-size: 40px;
+    letter-spacing: 3%;
+    word-spacing: 100%;
+    margin-bottom: 15px;
+  }
+
+  .Description {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .ProfilImage {
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+  }
 }
