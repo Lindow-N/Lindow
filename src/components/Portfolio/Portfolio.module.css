@@ -1,4 +1,80 @@
 .MainContainer {
-  height: 100vh;
-  background-color: brown;
+  padding: 6% 5%;
+}
+
+.SkillContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.SkillContainerLeft {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  font-size: 26px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 55px;
+  line-height: 1.25;
+  letter-spacing: 0.1em;
+  word-spacing: 0.01em;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.06em;
+  word-spacing: 0.01em;
+  margin-bottom: 20px;
+}
+
+.SkillContainerRight {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  word-spacing: 0.01em;
+  align-items: center;
+}
+
+/* Styles pour les appareils mobiles */
+@media (max-width: 768px) {
+  .SkillContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .SkillContainerLeft {
+    width: 100%;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 19px;
+  }
+  .title {
+    text-align: center;
+    font-size: 48px;
+  }
+  .description {
+    text-align: center;
+    font-size: 14px;
+  }
+  .SkillContainerRight {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

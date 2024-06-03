@@ -1,8 +1,8 @@
 .MainContainer {
   height: auto;
-  min-height: 100vh;
   background-color: var(--slate-gray);
   padding-top: 6%;
+  padding-bottom: 6%;
 }
 
 .subtitle {
