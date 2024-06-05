@@ -24,7 +24,7 @@ const Portfolio = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [imageSize, setImageSize] = useState({ width: 0, height: 0 });
 
-  const originalSize = { width: 600, height: 600 }; // Taille originale de l'image
+  const originalSize = { width: 600, height: 600 };
 
   useEffect(() => {
     const handleResize = () => {
@@ -38,11 +38,10 @@ const Portfolio = () => {
       }
     };
 
-    handleResize(); // Vérifie la taille initiale de la fenêtre
+    handleResize();
 
-    window.addEventListener("resize", handleResize); // Mets à jour l'état lors du redimensionnement
+    window.addEventListener("resize", handleResize);
 
-    // Forcer une mise à jour après un court délai pour s'assurer que la taille est correcte
     const resizeTimeout = setTimeout(handleResize, 100);
 
     return () => {
@@ -98,7 +97,7 @@ const Portfolio = () => {
                 src="/images/PortfolioMobile.png"
                 alt="Technologies"
                 useMap="#techmap"
-                style={{ width: "90%", height: "auto" }}
+                style={{ width: "100%", height: "auto" }}
               />
               <map name="techmap">
                 {coords.map((area, index) => (
@@ -150,7 +149,37 @@ const Portfolio = () => {
           )}
         </div>
       </div>
-      <div className={styles.portfolioContainer}></div>
+      <div className={styles.portfolioContainer}>
+        <h1 className={styles.titlePortfolio}>PORTFOLIO</h1>
+
+        <div className={styles.portfolioItem}>
+          <div className={styles.portfolioItemLeft}>
+            <img
+              src="/images/Portfolio1.png"
+              alt="Portfolio1"
+              className={styles.PortfolioImg1}
+            />
+            <img
+              src="/images/Portfolio3.png"
+              alt="Portfolio3"
+              className={styles.PortfolioImg2}
+            />
+          </div>
+
+          <div className={styles.portfolioItemRight}>
+            <img
+              src="/images/Portfolio2.png"
+              alt="Portfolio2"
+              className={styles.PortfolioImg3}
+            />
+            <img
+              src="/images/Portfolio4.png"
+              alt="Portfolio4"
+              className={styles.PortfolioImg4}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

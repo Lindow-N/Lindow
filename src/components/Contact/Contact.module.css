@@ -1,4 +1,117 @@
 .MainContainer {
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--slate-gray);
+  padding: 10% 0 0 0;
+}
+
+.titleContact {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 1.25;
+  letter-spacing: 0.1em;
+  word-spacing: 0.01em;
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--white);
+}
+
+.subtitleContact {
+  font-size: 28px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  color: var(--white);
+  text-align: center;
+  letter-spacing: 0.06em;
+  margin-bottom: 50px;
+}
+
+.contactContainer {
+  padding: 0 5%;
+  background-color: darkgreen;
+  display: flex;
+  flex-direction: row;
+}
+
+.contactContainerLeft {
+  width: 50%;
+}
+.phoneContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.emailContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.Text {
+  font-size: 28px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  color: var(--white);
+  letter-spacing: 0.06em;
+}
+
+.contactContainerRight {
+  width: 50%;
+  border-left: 1px solid var(--white);
+  background-color: brown;
+  padding: 2% 20% 2% 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  font-size: 20px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  color: var(--white);
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+
+.formInput {
+  background-color: var(--medium-gray);
+  color: black;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+
+.formtextarea {
+  background-color: var(--medium-gray);
+  color: black;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+  min-height: 150px;
 }

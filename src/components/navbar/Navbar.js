@@ -1,7 +1,10 @@
-// src/components/NavBar/NavBar.js
 import styles from "./NavBar.module.css";
 
-export default function NavBar({ activeSection }) {
+export default function NavBar({ activeSection, setActiveSection }) {
+  const handleNavClick = (section) => {
+    setActiveSection(section);
+  };
+
   return (
     <nav className={styles.navbar}>
       <ul className={styles.navList}>
@@ -12,6 +15,7 @@ export default function NavBar({ activeSection }) {
         >
           <a
             href="#accueil"
+            onClick={() => handleNavClick("accueil")}
             className={` ${
               activeSection === "accueil"
                 ? styles.navLinkActive
@@ -28,6 +32,7 @@ export default function NavBar({ activeSection }) {
         >
           <a
             href="#services"
+            onClick={() => handleNavClick("services")}
             className={` ${
               activeSection === "services"
                 ? styles.navLinkActive
@@ -49,6 +54,7 @@ export default function NavBar({ activeSection }) {
         >
           <a
             href="#portfolio"
+            onClick={() => handleNavClick("portfolio")}
             className={` ${
               activeSection === "portfolio"
                 ? styles.navLinkActive
@@ -65,6 +71,7 @@ export default function NavBar({ activeSection }) {
         >
           <a
             href="#contact"
+            onClick={() => handleNavClick("contact")}
             className={` ${
               activeSection === "contact"
                 ? styles.navLinkActive
