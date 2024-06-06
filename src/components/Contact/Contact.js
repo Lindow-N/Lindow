@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Contact.module.css";
 import SharedButton from "../Button/sharedButton";
+import { sendEmail } from "../../utils/emailService";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -18,7 +19,7 @@ export default function Contact() {
   };
 
   const handleClick = () => {
-    console.log(formData);
+    sendEmail(formData);
   };
 
   return (
@@ -76,12 +77,7 @@ export default function Contact() {
               onChange={handleChange}
             />
           </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "flex-end",
-            }}
-          >
+          <div className={styles.btnContainer}>
             <SharedButton onClick={handleClick}>Envoyer</SharedButton>
           </div>
         </div>

@@ -1,0 +1,15 @@
+.Toastify__toast-body {
+  font-size: 16px; /* Exemple de personnalisation du texte */
+}
+
+.Toastify__close-button {
+  color: white; /* Couleur du bouton de fermeture */
+}
+
+.Toastify__progress-bar--error {
+  background-color: #ed254e; /* Couleur de la barre de progression pour les erreurs */
+}
+
+.Toastify__progress-bar--success {
+  background-color: #23ce6b; /* Couleur de la barre de progression pour les succès */
+}

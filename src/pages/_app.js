@@ -1,5 +1,10 @@
+// pages/_app.js
 import "../styles/reset.scss";
 import "../styles/palette.scss";
+import "./styles/index.module.css";
+import "./styles/toastify.css";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
@@ -12,6 +17,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="Description of the home page" />
       </Head>
       <Component {...pageProps} />
+      <ToastContainer />
     </>
   );
 }

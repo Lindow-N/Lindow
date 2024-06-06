@@ -28,20 +28,20 @@
 }
 
 .contactContainer {
-  padding: 0 5%;
-  background-color: darkgreen;
+  padding: 0 8%;
   display: flex;
   flex-direction: row;
 }
 
 .contactContainerLeft {
   width: 50%;
+  padding-top: 5%;
 }
 .phoneContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .emailContainer {
@@ -53,7 +53,7 @@
 .Icon {
   width: 40px;
   height: 40px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .Text {
@@ -67,7 +67,6 @@
 .contactContainerRight {
   width: 50%;
   border-left: 1px solid var(--white);
-  background-color: brown;
   padding: 2% 20% 2% 20px;
 }
 
@@ -114,4 +113,51 @@
   letter-spacing: 0.06em;
   margin-bottom: 10px;
   min-height: 150px;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+/* Styles pour les appareils mobiles */
+@media (max-width: 768px) {
+  .MainContainer {
+    padding: 15% 0;
+  }
+  .titleContact {
+    font-size: 38px;
+  }
+
+  .subtitleContact {
+    font-size: 20px;
+  }
+  .contactContainer {
+    flex-direction: column;
+  }
+  .contactContainerLeft {
+    width: 100%;
+  }
+
+  .Icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .Text {
+    font-size: 20px;
+  }
+
+  .contactContainerRight {
+    width: 100%;
+    border-left: none;
+    padding: 0;
+    margin-top: 14%;
+  }
+  .formInput {
+    margin-bottom: 15px;
+  }
+  .btnContainer {
+    display: flex;
+    justify-content: center;
+  }
 }
