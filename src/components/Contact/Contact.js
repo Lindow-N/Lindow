@@ -18,8 +18,16 @@ export default function Contact() {
     });
   };
 
+  const clearForm = () => {
+    setFormData({
+      name: "",
+      email: "",
+      Message: "",
+    });
+  };
+
   const handleClick = () => {
-    sendEmail(formData);
+    sendEmail(formData, clearForm);
   };
 
   return (

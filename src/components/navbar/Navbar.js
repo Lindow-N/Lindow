@@ -43,7 +43,7 @@ export default function NavBar({ activeSection, setActiveSection }) {
           </a>
         </li>
         <div className={styles.logo}>
-          <img src="/images/Logo.png" alt="Logo" className={styles.logoImage} />
+          <img src="/icons/Logo.png" alt="Logo" className={styles.logoImage} />
         </div>
         <li
           className={`${

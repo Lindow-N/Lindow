@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Portfolio.module.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const calculateCoords = (
   originalWidth,
@@ -19,7 +21,6 @@ const calculateCoords = (
     Math.round(y2 * scaleY),
   ].join(",");
 };
-
 const Portfolio = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [imageSize, setImageSize] = useState({ width: 0, height: 0 });
@@ -27,6 +28,8 @@ const Portfolio = () => {
   const originalSize = { width: 600, height: 600 };
 
   useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS with a duration of 1000ms
+
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
       const imgElement = document.querySelector(".responsive-image");
@@ -54,22 +57,22 @@ const Portfolio = () => {
     {
       original: isMobile ? "0,0,600,170" : "0,40,290,210",
       alt: "React",
-      href: "https://reactjs.org",
+      href: "https://fr.legacy.reactjs.org/",
     },
     {
       original: isMobile ? "0,420,290,180" : "65,225,290,600",
       alt: "React Native",
-      href: "https://reactnative.dev",
+      href: "https://reactnative.dev/",
     },
     {
       original: isMobile ? "600,420,310,180" : "535,0,310,370",
       alt: "Firebase",
-      href: "https://firebase.google.com",
+      href: "https://firebase.google.com/",
     },
     {
       original: isMobile ? "0,430,600,600" : "310,400,600,560",
       alt: "Figma",
-      href: "https://www.figma.com",
+      href: "https://www.figma.com/fr-fr/design/",
     },
   ];
 
@@ -98,6 +101,7 @@ const Portfolio = () => {
                 alt="Technologies"
                 useMap="#techmap"
                 style={{ width: "100%", height: "auto" }}
+                data-aos="fade-up" // Add this line for animation
               />
               <map name="techmap">
                 {coords.map((area, index) => (
@@ -126,6 +130,7 @@ const Portfolio = () => {
                 alt="Technologies"
                 useMap="#techmap"
                 style={{ width: "90%", height: "auto" }}
+                data-aos="fade-up" // Add this line for animation
               />
               <map name="techmap">
                 {coords.map((area, index) => (
@@ -154,29 +159,64 @@ const Portfolio = () => {
 
         <div className={styles.portfolioItem}>
           <div className={styles.portfolioItemLeft}>
-            <img
-              src="/images/Portfolio1.png"
-              alt="Portfolio1"
-              className={styles.PortfolioImg1}
-            />
-            <img
-              src="/images/Portfolio3.png"
-              alt="Portfolio3"
-              className={styles.PortfolioImg2}
-            />
+            <a href="https://lecoinnippon.com/" target="_blank">
+              <img
+                src="/images/Portfolio5.png"
+                alt="Portfolio5"
+                className={`${styles.PortfolioImg1} aos-init aos-animate`}
+                data-aos="fade-up" // Add this line for animation
+              />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.cerclesocrate.maisonm.gay.mobile"
+              target="_blank"
+            >
+              <img
+                src="/images/Portfolio3.png"
+                alt="Portfolio3"
+                className={`${styles.PortfolioImg2} aos-init aos-animate`}
+                data-aos="fade-up" // Add this line for animation
+              />
+            </a>
           </div>
 
           <div className={styles.portfolioItemRight}>
-            <img
-              src="/images/Portfolio2.png"
-              alt="Portfolio2"
-              className={styles.PortfolioImg3}
-            />
-            <img
-              src="/images/Portfolio4.png"
-              alt="Portfolio4"
-              className={styles.PortfolioImg4}
-            />
+            <a
+              href="https://play.google.com/store/apps/details?id=com.PersoTraining.client.app&pcampaignid=web_share"
+              target="_blank"
+            >
+              <img
+                src="/images/Portfolio2.png"
+                alt="Portfolio2"
+                className={`${styles.PortfolioImg3} aos-init aos-animate`}
+                data-aos="fade-up" // Add this line for animation
+              />
+            </a>
+            <div className={styles.portfolioItemRightBottom}>
+              <a
+                href="https://lindow-n.github.io/Sushiman---Food-Landing-Pages/"
+                target="_blank"
+              >
+                <img
+                  src="/images/Portfolio4.png"
+                  alt="Portfolio4"
+                  className={`${styles.PortfolioImg4} aos-init aos-animate`}
+                  data-aos="fade-up" // Add this line for animation
+                />
+              </a>
+              <div style={{ margin: "0 10px" }}></div>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.kami.japonais&pcampaignid=web_share"
+                target="_blank"
+              >
+                <img
+                  src="/images/Portfolio1.png"
+                  alt="Portfolio1"
+                  className={`${styles.PortfolioImg4} aos-init aos-animate`}
+                  data-aos="fade-up" // Add this line for animation
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>
