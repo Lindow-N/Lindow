@@ -57,7 +57,7 @@
 }
 
 .Text {
-  font-size: 28px;
+  font-size: 30px;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 500;
   color: var(--white);
@@ -120,7 +120,7 @@
   justify-content: flex-end;
 }
 /* Styles pour les appareils mobiles */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .MainContainer {
     padding: 15% 0;
   }
@@ -131,7 +131,7 @@
 
   .subtitleContact {
     font-size: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   .contactContainer {
     flex-direction: column;
@@ -146,7 +146,7 @@
   }
 
   .Text {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .contactContainerRight {

@@ -21,6 +21,7 @@ const calculateCoords = (
     Math.round(y2 * scaleY),
   ].join(",");
 };
+
 const Portfolio = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [imageSize, setImageSize] = useState({ width: 0, height: 0 });
@@ -28,7 +29,7 @@ const Portfolio = () => {
   const originalSize = { width: 600, height: 600 };
 
   useEffect(() => {
-    AOS.init({ duration: 1000 }); // Initialize AOS with a duration of 1000ms
+    AOS.init({ duration: 1000, offset: 200 }); // Initialize AOS with a duration of 1000ms and an offset of 200px
 
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -101,7 +102,7 @@ const Portfolio = () => {
                 alt="Technologies"
                 useMap="#techmap"
                 style={{ width: "100%", height: "auto" }}
-                data-aos="fade-up" // Add this line for animation
+                data-aos="fade-up"
               />
               <map name="techmap">
                 {coords.map((area, index) => (
@@ -130,7 +131,7 @@ const Portfolio = () => {
                 alt="Technologies"
                 useMap="#techmap"
                 style={{ width: "90%", height: "auto" }}
-                data-aos="fade-up" // Add this line for animation
+                data-aos="fade-up"
               />
               <map name="techmap">
                 {coords.map((area, index) => (
@@ -164,7 +165,7 @@ const Portfolio = () => {
                 src="/images/Portfolio5.png"
                 alt="Portfolio5"
                 className={`${styles.PortfolioImg1} aos-init aos-animate`}
-                data-aos="fade-up" // Add this line for animation
+                data-aos="fade-up"
               />
             </a>
             <a
@@ -175,7 +176,7 @@ const Portfolio = () => {
                 src="/images/Portfolio3.png"
                 alt="Portfolio3"
                 className={`${styles.PortfolioImg2} aos-init aos-animate`}
-                data-aos="fade-up" // Add this line for animation
+                data-aos="fade-up"
               />
             </a>
           </div>
@@ -189,7 +190,7 @@ const Portfolio = () => {
                 src="/images/Portfolio2.png"
                 alt="Portfolio2"
                 className={`${styles.PortfolioImg3} aos-init aos-animate`}
-                data-aos="fade-up" // Add this line for animation
+                data-aos="fade-up"
               />
             </a>
             <div className={styles.portfolioItemRightBottom}>
@@ -201,7 +202,7 @@ const Portfolio = () => {
                   src="/images/Portfolio4.png"
                   alt="Portfolio4"
                   className={`${styles.PortfolioImg4} aos-init aos-animate`}
-                  data-aos="fade-up" // Add this line for animation
+                  data-aos="fade-up"
                 />
               </a>
               <div style={{ margin: "0 10px" }}></div>
@@ -213,7 +214,7 @@ const Portfolio = () => {
                   src="/images/Portfolio1.png"
                   alt="Portfolio1"
                   className={`${styles.PortfolioImg4} aos-init aos-animate`}
-                  data-aos="fade-up" // Add this line for animation
+                  data-aos="fade-up"
                 />
               </a>
             </div>

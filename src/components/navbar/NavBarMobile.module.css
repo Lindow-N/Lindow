@@ -1,0 +1,96 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+  background-color: var(--dark-gray);
+  border-radius: 50px;
+  position: fixed;
+  width: 90%;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbaropen {
+  padding: 0;
+  width: 100%;
+  top: 0;
+}
+
+.hamburgerMenu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.menuButton {
+  position: relative;
+  width: 30px;
+  height: 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menuButton .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: -100%; /* Initial position off-screen */
+  width: 100vw; /* 80% of the screen width */
+  height: 100vh;
+  background-color: var(--dark-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: right 0.5s ease-in-out;
+  opacity: 0; /* Initially invisible */
+  pointer-events: none; /* Initially not interactive */
+}
+
+.drawer.open {
+  right: 0; /* Slide in the drawer */
+  opacity: 1; /* Make visible */
+  pointer-events: all; /* Make interactive */
+}
+
+.drawerItem {
+  padding: 30px 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 26px;
+  text-align: center;
+  width: 100%;
+}
+
+.drawerItem:hover {
+  background: #46515e;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoImage {
+  height: 30px;
+  width: auto;
+}

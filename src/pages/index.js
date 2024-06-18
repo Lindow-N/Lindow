@@ -1,7 +1,7 @@
-// src/pages/index.js
 import { useState, useEffect } from "react";
 import styles from "./styles/index.module.css";
 import NavBar from "@/components/navbar/NavBar";
+import NavBarMobile from "@/components/navbar/NavBarMobile";
 
 import Home from "@/components/Home/Home";
 import Services from "@/components/Services/Services";
@@ -10,30 +10,30 @@ import Contact from "@/components/Contact/Contact";
 
 export default function Index() {
   const [activeSection, setActiveSection] = useState("");
-  console.log("Active Section:", activeSection);
+  const [isMobile, setIsMobile] = useState(false);
 
-  const handleClick = () => {
-    const sectionElement = document.getElementById("contact");
-    if (sectionElement) {
-      sectionElement.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1000);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
     const options = {
       root: null,
-      threshold: 0.1, // Change the threshold temporarily for testing
+      threshold: 0.1,
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(
-          "Observed section:",
-          entry.target.id,
-          "isIntersecting:",
-          entry.isIntersecting
-        );
         if (entry.isIntersecting) {
           setActiveSection(entry.target.id);
         }
@@ -41,7 +41,6 @@ export default function Index() {
     }, options);
 
     sections.forEach((section) => {
-      console.log("Observing section:", section.id); // Log sections being observed
       observer.observe(section);
     });
 
@@ -52,12 +51,26 @@ export default function Index() {
     };
   }, []);
 
+  const handleClick = () => {
+    const sectionElement = document.getElementById("contact");
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className={styles.MainContainer}>
-      <NavBar
-        activeSection={activeSection}
-        setActiveSection={setActiveSection}
-      />
+      {isMobile ? (
+        <NavBarMobile
+          activeSection={activeSection}
+          setActiveSection={setActiveSection}
+        />
+      ) : (
+        <NavBar
+          activeSection={activeSection}
+          setActiveSection={setActiveSection}
+        />
+      )}
       <section id="accueil">
         <Home handleClick={handleClick} />
       </section>

@@ -1,3 +1,16 @@
+.PortfolioImg1,
+.PortfolioImg2,
+.PortfolioImg3,
+.PortfolioImg4 {
+  transition: transform 0.3s ease-in-out;
+}
+
+.PortfolioImg1:hover,
+.PortfolioImg2:hover,
+.PortfolioImg3:hover,
+.PortfolioImg4:hover {
+  transform: translateY(-20px); /* Décale l'image vers le haut de 10 pixels */
+}
 .MainContainer {
   padding: 6% 5%;
 }
@@ -111,7 +124,7 @@
 }
 
 /* Styles pour les appareils mobiles */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .SkillContainer {
     display: flex;
     flex-direction: column;
