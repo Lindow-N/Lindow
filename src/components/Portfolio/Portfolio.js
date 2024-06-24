@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+
+import Head from "next/head";
 import styles from "./Portfolio.module.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -29,7 +31,7 @@ const Portfolio = () => {
   const originalSize = { width: 600, height: 600 };
 
   useEffect(() => {
-    AOS.init({ duration: 1000, offset: 200 }); // Initialize AOS with a duration of 1000ms and an offset of 200px
+    AOS.init({ duration: 1000, offset: 150 });
 
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -79,10 +81,50 @@ const Portfolio = () => {
 
   return (
     <div className={styles.MainContainer}>
+      <Head>
+        <title>Portfolio | Anthony Casares - Développeur Freelance</title>
+        <meta
+          name="description"
+          content="Découvrez le portfolio d'Anthony Casares, développeur web et mobile freelance. Parcourez mes projets réalisés en React, React Native, Firebase, et Figma."
+        />
+        <meta
+          property="og:title"
+          content="Portfolio | Anthony Casares - Développeur Freelance"
+        />
+        <meta
+          property="og:description"
+          content="Découvrez le portfolio d'Anthony Casares, développeur web et mobile freelance. Parcourez mes projets réalisés en React, React Native, Firebase, et Figma."
+        />
+        <meta property="og:image" content="/images/PortfolioImage.png" />
+        <meta property="og:url" content="https://lindow.fr/#portfolio" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Portfolio | Anthony Casares - Développeur Freelance"
+        />
+        <meta
+          name="twitter:description"
+          content="Découvrez le portfolio d'Anthony Casares, développeur web et mobile freelance. Parcourez mes projets réalisés en React, React Native, Firebase, et Figma."
+        />
+        <meta name="twitter:image" content="/images/PortfolioImage.png" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            name: "Portfolio d'Anthony Casares",
+            creator: {
+              "@type": "Person",
+              name: "Anthony Casares",
+            },
+            description:
+              "Découvrez le portfolio d'Anthony Casares, développeur web et mobile freelance. Parcourez mes projets réalisés en React, React Native, Firebase, et Figma.",
+            url: "https://lindow.fr/#portfolio",
+          })}
+        </script>
+      </Head>
       <div className={styles.SkillContainer}>
         <div className={styles.SkillContainerLeft}>
           <h2 className={styles.subtitle}>MES COMPÉTENCES</h2>
-
           <h1 className={styles.title}>
             Développement Web et Mobile de Qualité
           </h1>
@@ -99,7 +141,7 @@ const Portfolio = () => {
               <img
                 className="responsive-image"
                 src="/images/PortfolioMobile.png"
-                alt="Technologies"
+                alt="Illustration des technologies utilisées par Anthony Casares pour le développement web et mobile"
                 useMap="#techmap"
                 style={{ width: "100%", height: "auto" }}
                 data-aos="fade-up"
@@ -128,7 +170,7 @@ const Portfolio = () => {
               <img
                 className="responsive-image"
                 src="/images/PortfolioWeb.png"
-                alt="Technologies"
+                alt="Illustration des technologies utilisées par Anthony Casares pour le développement web et mobile"
                 useMap="#techmap"
                 style={{ width: "90%", height: "auto" }}
                 data-aos="fade-up"
@@ -157,13 +199,12 @@ const Portfolio = () => {
       </div>
       <div className={styles.portfolioContainer}>
         <h1 className={styles.titlePortfolio}>PORTFOLIO</h1>
-
         <div className={styles.portfolioItem}>
           <div className={styles.portfolioItemLeft}>
             <a href="https://lecoinnippon.com/" target="_blank">
               <img
                 src="/images/Portfolio5.png"
-                alt="Portfolio5"
+                alt="Projet de site web pour Le Coin Nippon"
                 className={`${styles.PortfolioImg1} aos-init aos-animate`}
                 data-aos="fade-up"
               />
@@ -174,13 +215,12 @@ const Portfolio = () => {
             >
               <img
                 src="/images/Portfolio3.png"
-                alt="Portfolio3"
+                alt="Projet d'application mobile pour Cercle Socrate"
                 className={`${styles.PortfolioImg2} aos-init aos-animate`}
                 data-aos="fade-up"
               />
             </a>
           </div>
-
           <div className={styles.portfolioItemRight}>
             <a
               href="https://play.google.com/store/apps/details?id=com.PersoTraining.client.app&pcampaignid=web_share"
@@ -188,7 +228,7 @@ const Portfolio = () => {
             >
               <img
                 src="/images/Portfolio2.png"
-                alt="Portfolio2"
+                alt="Projet d'application mobile pour Perso Training"
                 className={`${styles.PortfolioImg3} aos-init aos-animate`}
                 data-aos="fade-up"
               />
@@ -200,7 +240,7 @@ const Portfolio = () => {
               >
                 <img
                   src="/images/Portfolio4.png"
-                  alt="Portfolio4"
+                  alt="Projet de landing page pour Sushiman"
                   className={`${styles.PortfolioImg4} aos-init aos-animate`}
                   data-aos="fade-up"
                 />
@@ -212,7 +252,7 @@ const Portfolio = () => {
               >
                 <img
                   src="/images/Portfolio1.png"
-                  alt="Portfolio1"
+                  alt="Projet d'application mobile pour Kami Japonais"
                   className={`${styles.PortfolioImg4} aos-init aos-animate`}
                   data-aos="fade-up"
                 />

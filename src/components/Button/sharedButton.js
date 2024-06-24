@@ -8,7 +8,7 @@ const SharedButton = ({ onClick, children }) => {
         border: "none",
         borderRadius: "10px",
         cursor: "pointer",
-        fontSize: "1.3rem",
+        fontSize: "1.4rem",
         outline: "none",
         margin: "1rem 0",
         fontFamily: "Anton, sans-serif",
